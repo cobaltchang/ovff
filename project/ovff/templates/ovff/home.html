@@ -5,6 +5,15 @@
     <title>ovff</title>
 </head>
 <body>
+嘸蝦米查碼
+
+<form action="" method="post" role="form">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">查詢</button>
+</form>
+
+<label>字根∶</label> {{ radicals.radicals }}
 
 </body>
 </html>
