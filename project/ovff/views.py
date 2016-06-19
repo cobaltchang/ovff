@@ -8,7 +8,7 @@ from ovff.models import Radicals
 
 
 class OvffForm(forms.Form):
-    word = forms.CharField(label='')
+    query = forms.CharField(label='請輸入您要查詢的拆碼或文字')
 
 
 def home(request):
