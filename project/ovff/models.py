@@ -15,7 +15,7 @@ class Radicals:
         radicals = []
 
         dirname = os.path.dirname(__file__)
-        with open(dirname + '/boshiamy.txt', 'r', encoding='utf-8') as fp:
+        with open(dirname + '/boshiamy.dat', 'r', encoding='utf-8') as fp:
             for line in fp:
                 if query in line:
                     radicals += [tuple(line.split()), ]
