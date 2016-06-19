@@ -1,0 +1,22 @@
+#css_table {
+    display:table;
+}
+.css_th {
+    display: table-row;
+    font-weight: bold;
+}
+.css_th .css_td {
+    display: table-cell;
+    border: 2px solid white;
+    border-bottom-color: #606fff;
+}
+.css_tr {
+    display: table-row;
+
+}
+.css_td {
+    display: table-cell;
+    width: 80px;
+    border: 1px solid white;
+    border-bottom-color: #60cfff;
+}
