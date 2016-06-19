@@ -1,10 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>ovff</title>
-</head>
-<body>
+{% extends 'ovff/base.html' %}
+
+{% block title %}嘸蝦米查碼{% endblock title %}
+
+{% load static %}
+{% block extra_css %}
+<link rel="stylesheet" href="{% static "ovff/css/div_table.css" %}">
+{% endblock extra_css %}
+
+{% block content %}
 嘸蝦米查碼
 
 <form action="" method="post" role="form">
@@ -13,8 +16,10 @@
     <input type="submit" value="查詢"/>
 </form>
 
+{% if radicals.radicals %}
+<br />
 <div id="css_table">
-    <div class="css_tr">
+    <div class="css_th">
         <span class="css_td">文字</span>
         <span class="css_td">拆碼</span>
     </div>
@@ -25,6 +30,5 @@
     </div>
     {% endfor %}
 </div>
-
-</body>
-</html>
+{% endif %}
+{% endblock content %}
