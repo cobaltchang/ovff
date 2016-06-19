@@ -10,10 +10,21 @@
 <form action="" method="post" role="form">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">查詢</button>
+    <input type="submit" value="查詢"/>
 </form>
 
-<label>字根∶</label> {{ radicals.radicals }}
+<div id="css_table">
+    <div class="css_tr">
+        <span class="css_td">文字</span>
+        <span class="css_td">拆碼</span>
+    </div>
+    {% for result in radicals.radicals %}
+    <div class="css_tr">
+        <span class="css_td">{{ result.1 }}</span>
+        <span class="css_td">{{ result.0 }}</span>
+    </div>
+    {% endfor %}
+</div>
 
 </body>
 </html>
