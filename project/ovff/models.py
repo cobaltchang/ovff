@@ -1,4 +1,4 @@
-import os
+from django.db import models
 
 # Create your models here.
 
@@ -22,3 +22,8 @@ class Radicals:
                     radicals += [tuple(line.split()), ]
 
         return radicals
+
+
+class Radical(models.Model):
+    radical = models.CharField(max_length=5)
+    word = models.CharField(max_length=1)
