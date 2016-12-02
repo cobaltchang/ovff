@@ -27,3 +27,6 @@ class Radicals:
 class Radical(models.Model):
     radical = models.CharField(max_length=5)
     word = models.CharField(max_length=1)
+
+    def __str__(self):
+        return self.word
